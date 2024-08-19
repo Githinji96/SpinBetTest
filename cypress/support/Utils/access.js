@@ -18,8 +18,7 @@ export const registration = {
 
 }
 export const search={
-   search_btn:'.css-1k1mc0e > img',
-   typeSearch:'.css-opekjq > input',
-   textSearch:'.css-apwv8x > :nth-child(2) > img'
-   
+  search_btn:'.css-1k1mc0e > img',
+  typeSearch:'.css-opekjq > input',
+  textSearch:'.css-apwv8x > :nth-child(2) > img'
 }
