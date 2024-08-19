@@ -3,9 +3,9 @@ export const registration = {
     usernamefield:':nth-child(1) > .css-iq5cx > .css-15gg1qw > [data-testid="user-input"]',
     emailaddress:'[data-testid="email-input"]',
     country:'.css-lvre3k',
-    choosecountry:'.css-1wlm84a > .dropdown-list-container > :nth-child(13)',
+    choosecountry:'.css-1j6cd42 > .dropdown-list-container > .css-15zgsyd',
     currency:'.css-v4jzoj',
-    currencyType:'.css-ef0awm > :nth-child(2) > .css-1wlm84a > .dropdown-list-container > :nth-child(1)',
+    currencyType:'.css-1j6cd42 > .dropdown-list-container > .css-15zgsyd',
     password:':nth-child(4) > .css-iq5cx > .css-15gg1qw > [data-testid="user-input"]',
     DOBText:'.css-gg4vpm > :nth-child(1) > input',
     MOBText:'.css-gg4vpm > :nth-child(2) > input',
@@ -18,8 +18,8 @@ export const registration = {
 
 }
 export const search={
-  search_btn:'.css-lj3vcs',
-  typeSearch:'.css-1whr1gu',
-  clicksearch:'.css-s83cax',
-  gettext:'.css-46byg'
+   search_btn:'.css-1k1mc0e > img',
+   typeSearch:'.css-opekjq > input',
+   textSearch:'.css-apwv8x > :nth-child(2) > img'
+   
 }

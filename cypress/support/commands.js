@@ -98,25 +98,24 @@ Cypress.Commands.add('clickRegisterbtn', (selector) => {
         .click()
 })
 // search casino games
-Cypress.Commands.add('ClickCasinoGames', (selector) => {
+
+Cypress.Commands.add('clickSearch', (selector) => {
     cy.get(selector)
-        .should('be.visible')
-        .click()
+    .click()
 })
-Cypress.Commands.add('searchCasinoGames', (selector) => {
+Cypress.Commands.add('typeSearch', (selector) => {
     cy.get(selector)
-        .type('spinza{enter}')
+    .should('be.visible')
+    .type("spinbet princess")
 })
-Cypress.Commands.add('ClickSearch', (selector) => {
-    cy.get(selector)
-        .click()
-})
-Cypress.Commands.add('getText', (selector) => {
-    cy.get(selector)
-    .then((elem) => {
-        let print_text = elem.text()
-        cy.log(print_text)
-        expect(print_text).to.equal(texts)
-      })
-})
+Cypress.Commands.add('verifyGameSearch', (selector) => {
+    cy.get(selector). then((elem) => {
+                // Get the alt attribute  to compare
+                const altText = elem.attr('alt'); 
+                cy.log(altText);
+              
+                // Assert that the alt text is equal to "princess win"
+                expect(altText).to.equal('Play SpinBet Princess | Spinbet Casino');
+              });
+            })
 
