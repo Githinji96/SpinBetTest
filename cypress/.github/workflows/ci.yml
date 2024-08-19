@@ -1,25 +1,29 @@
-name: testliotast
+name: CI
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
-  test:
+  cypress-run:
+    name: Run Cypress Tests
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Install    dependencies
-        run:    npm install
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Run Cypress tests
-       run: npx cypress run
-
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          path: cypress/results
+        run: npm run cypress:runDefault
